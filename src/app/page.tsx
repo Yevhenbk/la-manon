@@ -1,17 +1,21 @@
 import { NextPage } from "next";
-import Navbar from "@/components/Navbar";
-import MainBoard from "@/components/MainBoard";
-import Card from "@/components/Card";
-import Footer from "@/components/Footer";
+import { 
+  MainBoard, Navbar, Card, Footer 
+} from "@/components";
+import { navbarData } from "@/utils/constants";
 
 const Home: NextPage = () => {
   return (
-    <main className="">
-      <Navbar />
-      <MainBoard />
-      <Card />
+    <div className="">
+      <Navbar navbarData={navbarData} />
+
+      <main className="min-h-screen flex flex-col items-center justify-center">
+        <MainBoard />
+      </main>
+
+      {/* <Card /> */}
       <Footer />
-    </main>
+    </div>
   );
 };
 
