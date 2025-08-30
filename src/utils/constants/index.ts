@@ -4,3 +4,4 @@ export * from "./menuButtonData";
 export * from "./footerData";
 export * from "./cardData";
 export * from "./scheduleData";
+export * from "./labelCardData";

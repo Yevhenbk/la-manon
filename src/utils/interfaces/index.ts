@@ -4,3 +4,4 @@ export * from "./menuButtonInterface";
 export * from "./footerInterface";
 export * from "./cardInterface";
 export * from "./scheduleInterface";
+export * from "./labelCardInterface";
