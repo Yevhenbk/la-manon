@@ -19,9 +19,9 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
         </div>
       </div>
 
-      <ul className="flex flex-row justify-around md:justify-center md:space-x-20 py-4 w-full md:w-[70vw]">
+      <ul className="flex flex-row justify-around md:justify-center md:space-x-20 py-4 w-full md:w-[70vw] overflow-x-hidden">
         {navbarData.items.main.map((item: NavbarItem) => (
-          <li key={item.label} className="text-sm md:text-lg uppercase font-bebas">
+          <li key={item.label} className="text-sm md:text-lg uppercase font-bebas max-w-[6rem] overflow-hidden text-ellipsis whitespace-nowrap">
             <a href={item.href} aria-label={item.altText}>
               {item.label}
             </a>
