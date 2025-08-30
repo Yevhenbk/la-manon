@@ -3,3 +3,4 @@ export { default as MainBoard } from "./MainBoard";
 export { default as Card } from "./Card";
 export { default as Footer } from "./Footer";
 export { default as NestedCards } from "./NestedCards";
+export { default as Schedule } from "./Schedule";
