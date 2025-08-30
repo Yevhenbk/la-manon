@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import { 
-  MainBoard, Navbar, NestedCards, Footer, Schedule } from "@/components";
+  MainBoard, Navbar, NestedCards, Footer, Schedule, LabelCardList } from "@/components";
 import { 
-  navbarData, mainBoardData, footerData, cardData, scheduleData } from "@/utils/constants";
+  navbarData, mainBoardData, footerData, cardData, scheduleData, labelCardData } from "@/utils/constants";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
     // </Footer>
     <div>
       <MainBoard mainBoardData={mainBoardData} />
+      <LabelCardList labelCardData={labelCardData} />
     </div>
   );
 };

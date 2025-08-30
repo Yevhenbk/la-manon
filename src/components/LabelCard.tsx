@@ -2,23 +2,23 @@ import classNames from "classnames"
 import { LabelCardInterface } from "@/utils/interfaces"
 
 interface LabelInterface {
-  labelData: LabelCardInterface
+  labelCardData: LabelCardInterface
 }
 
-const LabelCard: React.FC<LabelInterface> = ({ labelData }) => {
+const LabelCard: React.FC<LabelInterface> = ({ labelCardData }) => {
   return (
-    <div className={classNames(`text-[#E9E9E9] 
+    <div key={labelCardData.id} className={classNames(`text-black 
     flex flex-col p-8 xl:p-16 items-start justify-between 
     gap-8 rounded-xl flex-1`, {
-      "bg-[#083459]": labelData.background === "dark",
-      "bg-[#0d4e83]": labelData.background === "light",
+      "bg-primary": labelCardData.background === "dark",
+      "bg-tertiary": labelCardData.background === "light",
     })}>
       <p className="text-4xl md:text-5xl xl:text-7xl 
       font-medium">
-        {labelData.label}
+        {labelCardData.title}
       </p>
-      <p className="text-xl xl:text-2xl">
-        {labelData.title}
+      <p className="text-xl xl:text-2xl font-medium">
+        {labelCardData.label}
       </p>
     </div>
   )

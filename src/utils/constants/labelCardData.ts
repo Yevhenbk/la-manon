@@ -1,4 +1,6 @@
-export const labelCardData = [
+import { LabelCardInterface } from "../interfaces";
+
+export const labelCardData: LabelCardInterface[] = [
   {
     id: 1,
     title: "Experiencias",
