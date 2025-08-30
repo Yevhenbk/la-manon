@@ -2,17 +2,16 @@ import { NextPage } from "next";
 import { 
   MainBoard, Navbar, Card, Footer 
 } from "@/components";
-import { navbarData, mainBoardData } from "@/utils/constants";
+import { navbarData, mainBoardData, footerData } from "@/utils/constants";
 
 const Home: NextPage = () => {
   return (
-    <main className="">
+    <Footer footerData={footerData}>
       <Navbar navbarData={navbarData} />
       <MainBoard mainBoardData={mainBoardData} />
 
       {/* <Card /> */}
-      <Footer />
-    </main>
+    </Footer>
   );
 };
 
