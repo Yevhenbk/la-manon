@@ -15,5 +15,10 @@ export const cardData: CardInterface[] = [
     id: 3,
     title: "La estrella de nuestra casa: croissants horneados con la receta original.",
     imageUrl: "/lamanon_croisant.png"
+  },
+  {
+    id: 4,
+    title: "Empieza la mañana con la combinación más clásica y reconfortante.",
+    imageUrl: "/lamanon_breakfast.png"
   }
 ];

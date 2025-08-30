@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { 
-  MainBoard, Navbar, NestedCards, Footer 
-} from "@/components";
+  MainBoard, Navbar, NestedCards, Footer } from "@/components";
 import { 
   navbarData, mainBoardData, footerData, cardData } from "@/utils/constants";
 
