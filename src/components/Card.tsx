@@ -1,15 +1,22 @@
-import React from 'react'
+import Image from "next/image"
+import { CardInterface } from "@/utils/interfaces"
 
 interface CardProps {
-  title?: string
-  description?: string
+  cardData: CardInterface
 }
 
-const Card: React.FC<CardProps> = (props) => {
+const Card: React.FC<CardProps> = ({ cardData }) => {
   return (
-    <div>
-      <h2 className="">{props.title}</h2>
-      <p className="">{props.description}</p>
+    <div key={cardData.id} className="h-[30rem] w-[22vw] h-full relative">
+      <div className="relative w-full h-[26rem]">
+        <Image
+          src={cardData.imageUrl}
+          alt={cardData.title}
+          fill
+          className="object-cover object-center"
+        />
+      </div>
+      <h2>{cardData.title}</h2>
     </div>
   )
 }
