@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
         </div>
       </div>
 
-      <ul className="flex flex-row justify-center space-x-4 md:space-x-20 py-4 w-[90vw] md:w-[80vw] border-b-3 border-gray-100">
+      <ul className="flex flex-row justify-around md:justify-center md:space-x-20 py-4 w-full md:w-[70vw]">
         {navbarData.items.main.map((item: NavbarItem) => (
           <li key={item.label} className="text-sm md:text-lg uppercase font-bebas">
             <a href={item.href} aria-label={item.altText}>
