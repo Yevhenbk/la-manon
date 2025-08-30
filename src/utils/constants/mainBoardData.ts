@@ -2,7 +2,7 @@ import { MainBoardInterface } from "../interfaces";
 import { menuButtonData } from "./menuButtonData";
 
 export const mainBoardData: MainBoardInterface = {
-  title: "Un lugar agradable, diferente y singular. Un producto de esta calidad se merece un entorno en el que poder hacer un parón en nuestro trabajo diario.",
+  title: "La mejor selección de café y té en tu taza, saboreando nuestro café galardonado con la medalla de oro a nivel europeo.",
   rating: 5,
   imageUrl: "/main_image.jpg",
   altText: "La Manon Sagasta 5",

@@ -7,16 +7,19 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ cardData }) => {
   return (
-    <div key={cardData.id} className="h-[30rem] w-[22vw] h-full relative">
-      <div className="relative w-full h-[26rem]">
+    <div key={cardData.id} className="h-[32rem] w-[22vw] h-full relative">
+      <div className="relative w-full h-[32rem]">
         <Image
           src={cardData.imageUrl}
           alt={cardData.title}
           fill
           className="object-cover object-center"
         />
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
-      <h2>{cardData.title}</h2>
+      <div className="absolute top-0 left-0 w-full h-full z-20 flex justify-center items-end">
+        <h2 className="text-white font-semibold font-playfair text-xl p-4 text-center">{cardData.title}</h2>
+      </div>
     </div>
   )
 }
