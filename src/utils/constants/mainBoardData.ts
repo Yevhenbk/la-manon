@@ -6,5 +6,6 @@ export const mainBoardData: MainBoardInterface = {
   rating: 5,
   imageUrl: "/main_image.jpg",
   altText: "La Manon Sagasta 5",
+  address: "C. de Sagasta, 5, Chamberí, 28004 Madrid",
   menuButtons: menuButtonData
 };

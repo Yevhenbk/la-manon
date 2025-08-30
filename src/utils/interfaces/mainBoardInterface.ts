@@ -5,5 +5,6 @@ export interface MainBoardInterface {
   rating: number;
   imageUrl: string;
   altText: string;
+  address: string;
   menuButtons: MenuButtonInterface[];
 }

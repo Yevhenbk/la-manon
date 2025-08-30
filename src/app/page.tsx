@@ -6,12 +6,15 @@ import {
 
 const Home: NextPage = () => {
   return (
-    <Footer footerData={footerData}>
-      <Navbar navbarData={navbarData} />
+    // <Footer footerData={footerData}>
+    //   <Navbar navbarData={navbarData} />
+    //   <MainBoard mainBoardData={mainBoardData} />
+    //   <NestedCards cardData={cardData} />
+    //   <Schedule scheduleData={scheduleData} />
+    // </Footer>
+    <div>
       <MainBoard mainBoardData={mainBoardData} />
-      <NestedCards cardData={cardData} />
-      <Schedule scheduleData={scheduleData} />
-    </Footer>
+    </div>
   );
 };
 
