@@ -8,6 +8,7 @@ export interface NavbarInterface {
 }
 
 export interface NavbarItem {
+  id: number;
   label: string;
   href: string;
   altText: string;

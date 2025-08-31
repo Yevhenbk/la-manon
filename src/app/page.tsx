@@ -13,6 +13,7 @@ const Home: NextPage = () => {
     //   <Schedule scheduleData={scheduleData} />
     // </Footer>
     <div>
+      <Navbar navbarData={navbarData} />
       <MainBoard mainBoardData={mainBoardData} />
       <LabelCardList labelCardData={labelCardData} />
       <NestedCards cardData={cardData} />

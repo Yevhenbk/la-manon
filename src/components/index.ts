@@ -6,3 +6,4 @@ export { default as NestedCards } from "./NestedCards";
 export { default as Schedule } from "./Schedule";
 export { default as LabelCard } from "./LabelCard";
 export { default as LabelCardList } from "./LabelCardList";
+export { default as Menu } from "./Menu";

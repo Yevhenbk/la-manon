@@ -6,10 +6,10 @@ export const navbarData: NavbarInterface = {
   altText: "Logo",
   items: {
     main: [
-      { label: "Contacto", href: "/contact", altText: "Contact page" },
-      { label: "Política de Privacidad", href: "/privacy-policy", altText: "Privacy Policy page" },
-      { label: "Reseñas", href: "/reviews", altText: "Reviews page" },
-      { label: "Ubicación", href: "/about", altText: "About Us page" },
+      { id: 1, label: "Contacto", href: "/contact", altText: "Contact page" },
+      { id: 2, label: "Política de Privacidad", href: "/privacy-policy", altText: "Privacy Policy page" },
+      { id: 3, label: "Reseñas", href: "/reviews", altText: "Reviews page" },
+      { id: 4, label: "Ubicación", href: "/about", altText: "About Us page" },
     ],
   },
 };

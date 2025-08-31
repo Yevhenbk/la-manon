@@ -1,4 +1,9 @@
+"use client"
+
+import { useState, useEffect } from "react";
+import Menu from "./Menu";
 import Image from "next/image";
+import Link from "next/link";
 import { NavbarInterface, NavbarItem } from "@/utils/interfaces";
 
 interface NavbarProps {
@@ -6,10 +11,33 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
+  const [colors, setColors] = useState({
+    bg: "transparent",
+    text: "var(--background)"
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setColors({ bg: "black", text: "var(--background)" });
+    } else {
+      setColors({ bg: "transparent", text: "var(--background)" });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex flex-col w-full justify-center items-center">
-      <div className="py-8 w-full h-[8rem] md:h-[10rem] bg-black flex justify-center items-center">
-        <div className="relative w-[20rem] h-[4rem] md:h-[6rem] w-full">
+    <div
+      className={`h-20 w-full flex justify-between items-center fixed z-[999] font-medium px-4`}
+      style={{ backgroundColor: colors.bg, color: colors.text }}
+    >
+      {colors.bg !== "transparent" && (
+        <div className="relative w-[8rem] h-[2rem] md:h-[3rem] w-[9rem]">
           <Image
             src={navbarData.imageUrl}
             alt={navbarData.altText}
@@ -17,18 +45,28 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
             className="object-contain"
           />
         </div>
+      )}
+      <div className="flex items-center gap-4 ml-auto">
+        <Menu>
+          {navbarData.items.main.map((item: NavbarItem) => (
+            <Link key={item.id} href={item.href} target="_blank">
+              <p className="text-sm xl:text-md 2xl:text-lg text-tertiary">
+                {item.label}
+              </p>
+            </Link>
+          ))}
+        </Menu>
+        <div className="hidden lg:flex justify-center gap-12 pr-20">
+          {navbarData.items.main.map((item: NavbarItem) => (
+            <Link key={item.id} href={item.href} target="_blank">
+              <p className="text-sm xl:text-md 2xl:text-lg">
+                {item.label}
+              </p>
+            </Link>
+          ))}
+        </div>
       </div>
-
-      <ul className="flex flex-row justify-around md:justify-center md:space-x-20 py-4 w-full md:w-[70vw] overflow-x-hidden">
-        {navbarData.items.main.map((item: NavbarItem) => (
-          <li key={item.label} className="text-sm md:text-lg uppercase font-bebas max-w-[6rem] overflow-hidden text-ellipsis whitespace-nowrap">
-            <a href={item.href} aria-label={item.altText}>
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
 import classNames from "classnames"
 import { LabelCardInterface } from "@/utils/interfaces"
 
-interface LabelInterface {
+interface LabelCardProps {
   labelCardData: LabelCardInterface
 }
 
-const LabelCard: React.FC<LabelInterface> = ({ labelCardData }) => {
+const LabelCard: React.FC<LabelCardProps> = ({ labelCardData }) => {
   return (
     <div key={labelCardData.id} className={classNames(`text-black 
     flex flex-col p-8 xl:p-16 items-start justify-between 
