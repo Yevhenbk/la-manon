@@ -7,5 +7,4 @@ export interface FooterInterface {
 export interface FooterItemInterface {
   id: number;
   label: string;
-  icon: React.ReactNode | React.JSX.Element;
 }

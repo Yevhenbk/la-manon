@@ -19,6 +19,7 @@ const Home: NextPage = () => {
       <LabelCardList labelCardData={labelCardData} />
       <NestedCards cardData={cardData} />
       <FormWrapper />
+      <Footer footerData={footerData} />
     </div>
   );
 };

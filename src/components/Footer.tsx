@@ -1,27 +1,33 @@
 import { FooterInterface, FooterItemInterface } from "@/utils/interfaces"
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
 
 interface FooterProps {
   footerData: FooterInterface,
-  children: React.ReactNode
 }
 
-const Footer: React.FC<FooterProps> = ({ footerData, children }) => {
+const Footer: React.FC<FooterProps> = ({ footerData }) => {
   return (
-    <footer>
-      <div className="related top-0 left-0 w-full h-10 bg-[#e9d8a6] flex justify-around items-center">
-        {footerData.footerItems.map((item: FooterItemInterface) => (
-          <div key={item.id} className="flex items-center justify-center w-[100px] md:w-[252px]">
-            {item.icon}
-            <span className="ml-2 font-playfair text-xs font-semibold truncate overflow-hidden whitespace-nowrap">{item.label}</span>
-          </div>
-        ))}
-      </div>
-      <main className="flex flex-col items-center">
-        {children}
-      </main>
-      <div className="related bottom-0 left-0 w-full h-40 bg-black flex flex-col md:flex-row gap-6 md:gap-0 justify-center md:justify-around items-center">
+    <footer className="w-full">
+      <div className="w-full flex justify-center items-center py-8 bg-black">
         <img src={footerData.imageUrl} alt="Logo" className="h-[4rem] md:h-20 object-contain" />
-        <span className="font-playfair font-semibold text-xs md:text-sm text-white">{footerData.copyright}</span>
+      </div>
+      <div className="w-full bg-tertiary flex flex-col-reverse md:flex-row justify-around items-center text-black font-medium 
+      py-8 md:py-4 gap-12 md:gap-0">
+        <span className="text-sm px-8 text-center md:px-0">
+          {footerData.copyright}
+        </span>
+        <div className="flex flex-col md:flex-row gap-4">
+          {footerData.footerItems.map((item: FooterItemInterface) => {
+            let icon = null;
+            if (item.label.includes("@")) icon = <FaEnvelope className="inline mr-1" />;
+            // Improved phone detection: matches +34, spaces, dashes, and numbers
+            else if (/\+?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}/.test(item.label) || /\d{9}/.test(item.label)) icon = <FaPhone className="inline mr-1" />;
+            else if (item.label.toLowerCase().includes("madrid") || item.label.toLowerCase().includes("chamberí")) icon = <FaMapMarkerAlt className="inline mr-1" />;
+            return (
+              <span key={item.id} className="text-xs flex items-center gap-1">{icon}{item.label}</span>
+            );
+          })}
+        </div>
       </div>
     </footer>
   )
