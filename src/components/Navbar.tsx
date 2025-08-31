@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
       style={{ backgroundColor: colors.bg, color: colors.text }}
     >
       {colors.bg !== "transparent" && (
-        <div className="relative w-[8rem] h-[2rem] md:h-[3rem] w-[9rem]">
+        <div className="relative w-[8rem] h-[2rem] md:h-[3rem] w-[9rem] md:ml-6">
           <Image
             src={navbarData.imageUrl}
             alt={navbarData.altText}
