@@ -7,3 +7,5 @@ export { default as Schedule } from "./Schedule";
 export { default as LabelCard } from "./LabelCard";
 export { default as LabelCardList } from "./LabelCardList";
 export { default as Menu } from "./Menu";
+export { default as ContactForm } from "./ContactForm";
+export { default as FormWrapper } from "./FormWrapper";
