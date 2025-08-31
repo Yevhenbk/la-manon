@@ -15,6 +15,7 @@ const Home: NextPage = () => {
     <div>
       <MainBoard mainBoardData={mainBoardData} />
       <LabelCardList labelCardData={labelCardData} />
+      <NestedCards cardData={cardData} />
     </div>
   );
 };

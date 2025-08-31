@@ -7,8 +7,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ cardData }) => {
   return (
-    <div key={cardData.id} className="h-[50vw] md:h-[26rem] w-full md:w-[16vw] h-full relative">
-      <div className="relative w-full h-[50vw] md:h-[26rem]">
+    <div key={cardData.id} className="h-[30rem] md:h-[40rem] w-full md:w-full relative">
+      <div className="relative w-full h-[30rem] md:h-[40rem] rounded-xl overflow-hidden">
         <Image
           src={cardData.imageUrl}
           alt={cardData.title}
@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-20 flex justify-center items-end">
-        <h2 className="text-white font-semibold font-playfair text-sm md:text-xl p-4 text-center">{cardData.title}</h2>
+        <h2 className="text-white font-medium text-2xl p-4 text-start">{cardData.title}</h2>
       </div>
     </div>
   )
