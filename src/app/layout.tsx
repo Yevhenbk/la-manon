@@ -19,6 +19,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/lamanon_logo.svg" type="image/svg+xml" />
+      </head>
       <body
         className={poppins.className}
       >

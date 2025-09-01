@@ -12,7 +12,7 @@ interface IconsProps {
 
 const icons: IconsProps[] = [
   { component: FaPhoneAlt, title: "+34 912 40 12 83" },
-  { component: IoMdMail, title: "lamanon@gmail.com" },
+  { component: IoMdMail, title: "lamanon.sagasta.ia@gmail.com" },
   { component: IoLocation, title: "C. de Sagasta, 5, Chamberí, 28004 Madrid" },
 ]
 

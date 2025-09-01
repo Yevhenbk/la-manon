@@ -4,11 +4,11 @@ export const menuButtonData: MenuButtonInterface[] = [
   {
     id: 1,
     label: "Carta Desayunos",
-    link: "#"
+    link: "/menu-desayunos.pdf"
   },
-  {
-    id: 2,
-    label: "Carta Mediodia",
-    link: "#"
-  }
+  // {
+  //   id: 2,
+  //   label: "Carta Mediodia",
+  //   link: "#"
+  // }
 ];

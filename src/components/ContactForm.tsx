@@ -1,17 +1,14 @@
 "use client"
 
-import { FC, useState } from "react"
-import axios from "axios"
-import Link from "next/link"
+import { FC } from "react"
+import { useForm, ValidationError } from "@formspree/react"
 
 const ContactForm: FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    consultation: ""
-  })
+  const [state, handleSubmit] = useForm("mjkerndb"); // Use your Formspree form ID
+
+  if (state.succeeded) {
+    return <p className="text-green-600 font-semibold">¡Gracias por tu mensaje!</p>;
+  }
 
   const wrapper = "flex flex-col gap-2 "
   const textareaWrapper = "flex flex-col gap-2 md:col-span-2 md:row-span-2"
@@ -19,96 +16,82 @@ const ContactForm: FC = () => {
   const textarea = "rounded-md border-2 border-secondary p-2 text-sm h-32 md:h-full outline-none"
   const label = "text-sm"
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    try {
-      const response = await axios.post("https://formspree.io/f/xqkvvpgv", formData)
-      console.log("Form submission successful:", response.data)
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        consultation: ""
-      })
-    } catch (error) {
-      console.error("Form submission failed:", error)
-    }
-  }
-
   return (
-    <form className="md:grid md:grid-cols-2 md:grid-rows-4
-    flex flex-col gap-6 w-[20rem] md:w-full" onSubmit={handleSubmit}>
+    <form
+      className="md:grid md:grid-cols-2 md:grid-rows-4 flex flex-col gap-6 w-[20rem] md:w-full"
+      onSubmit={handleSubmit}
+    >
       <div className={wrapper}>
-        <label className={label}>
+        <label className={label} htmlFor="firstName">
           Nombre *
         </label>
-        <input 
-          type="text" 
+        <input
+          id="firstName"
+          type="text"
           name="firstName"
-          className={input} 
-          value={formData.firstName} 
-          onChange={handleChange} 
+          className={input}
+          required
         />
+        <ValidationError prefix="Nombre" field="firstName" errors={state.errors} />
       </div>
       <div className={wrapper}>
-        <label className={label}>
+        <label className={label} htmlFor="lastName">
           Apellido *
         </label>
-        <input 
-          type="text" 
+        <input
+          id="lastName"
+          type="text"
           name="lastName"
-          className={input} 
-          value={formData.lastName} 
-          onChange={handleChange} 
+          className={input}
+          required
         />
+        <ValidationError prefix="Apellido" field="lastName" errors={state.errors} />
       </div>
       <div className={wrapper}>
-        <label className={label}>
+        <label className={label} htmlFor="phone">
           Teléfono *
         </label>
-        <input 
-          type="text" 
+        <input
+          id="phone"
+          type="text"
           name="phone"
-          className={input} 
-          value={formData.phone} 
-          onChange={handleChange} 
+          className={input}
+          required
         />
+        <ValidationError prefix="Teléfono" field="phone" errors={state.errors} />
       </div>
       <div className={wrapper}>
-        <label className={label}>
+        <label className={label} htmlFor="email">
           Email *
         </label>
-        <input 
-          type="text" 
+        <input
+          id="email"
+          type="email"
           name="email"
-          className={input} 
-          value={formData.email} 
-          onChange={handleChange} 
+          className={input}
+          required
         />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <div className={textareaWrapper}>
-        <label className={label}>
+        <label className={label} htmlFor="consultation">
           Mensaje *
         </label>
         <textarea
+          id="consultation"
           name="consultation"
           className={textarea}
-          value={formData.consultation} 
-          onChange={handleChange} 
+          required
         />
+        <ValidationError prefix="Mensaje" field="consultation" errors={state.errors} />
       </div>
-      <button type="submit" className="text-sm md:text-lg bg-primary text-black transition-all
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className="text-sm md:text-lg bg-primary text-black transition-all
         rounded-full border border-white m-0 py-3 px-3 md:px-5 flex justify-center items-center font-semibold w-[160px] md:w-[220px]
-        hover:bg-tertiary hover:cursor-pointer">
+        hover:bg-tertiary hover:cursor-pointer"
+      >
         Enviar
       </button>
     </form>

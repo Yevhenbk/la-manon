@@ -7,7 +7,7 @@ export const footerItems: FooterItemInterface[] = [
     },
     {
       id: 2,
-      label: "info@lamanon.com",
+      label: "lamanon.sagasta.ia@gmail.com",
     },
     {
       id: 3,
