@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import Menu from "./Menu";
+import Menu from "../atoms/Menu";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarInterface, NavbarItem } from "@/utils/interfaces";
