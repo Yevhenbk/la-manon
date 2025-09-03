@@ -1,18 +1,12 @@
 import { NextPage } from "next";
 import { 
-  MainBoard, Navbar, NestedCards, Footer, Schedule, LabelCardList, 
+  MainBoard, Navbar, NestedCards, Footer, LabelCardList, 
   FormWrapper} from "@/components";
 import { 
-  navbarData, mainBoardData, footerData, cardData, scheduleData, labelCardData } from "@/utils/constants";
+  navbarData, mainBoardData, footerData, cardData, labelCardData } from "@/utils/constants";
 
 const Home: NextPage = () => {
   return (
-    // <Footer footerData={footerData}>
-    //   <Navbar navbarData={navbarData} />
-    //   <MainBoard mainBoardData={mainBoardData} />
-    //   <NestedCards cardData={cardData} />
-    //   <Schedule scheduleData={scheduleData} />
-    // </Footer>
     <div>
       <Navbar navbarData={navbarData} />
       <MainBoard mainBoardData={mainBoardData} />

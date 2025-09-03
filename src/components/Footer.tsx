@@ -20,7 +20,6 @@ const Footer: React.FC<FooterProps> = ({ footerData }) => {
           {footerData.footerItems.map((item: FooterItemInterface) => {
             let icon = null;
             if (item.label.includes("@")) icon = <FaEnvelope className="inline mr-1" />;
-            // Improved phone detection: matches +34, spaces, dashes, and numbers
             else if (/\+?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}/.test(item.label) || /\d{9}/.test(item.label)) icon = <FaPhone className="inline mr-1" />;
             else if (item.label.toLowerCase().includes("madrid") || item.label.toLowerCase().includes("chamberí")) icon = <FaMapMarkerAlt className="inline mr-1" />;
             return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { IoLocation } from "react-icons/io5";
 import { MainBoardInterface, MenuButtonInterface } from "@/utils/interfaces";
-import MenuButton from "./MenuButton";
+import MenuButton from "./atoms/MenuButton";
 
 interface MainBoardProps {
   mainBoardData: MainBoardInterface
@@ -47,9 +47,9 @@ const MainBoard:React.FC<MainBoardProps> = ({ mainBoardData }) => {
           ))}
         </div>
         <div className="flex flex-col items-start gap-2 md:pt-4 md:pt-8">
-          {mainBoardData.menuButtons.map((buttonData: MenuButtonInterface) => (
-            <MenuButton key={buttonData.id} buttonData={buttonData} />
-            ))}
+          {mainBoardData.menuButtons.map((menuButtonData: MenuButtonInterface) => (
+            <MenuButton key={menuButtonData.id} menuButtonData={menuButtonData} />
+          ))}
         </div>
         <div className="flex gap-2 justify-start items-center">
           <IoLocation className="text-xl" />
