@@ -6,7 +6,5 @@ export { default as NestedCards } from "./NestedCards";
 export { default as LabelCard } from "./LabelCard";
 export { default as LabelCardList } from "./LabelCardList";
 export { default as Menu } from "./Menu";
-export { default as MenuButton } from "./atoms/MenuButton";
 export { default as ContactForm } from "./ContactForm";
 export { default as FormWrapper } from "./FormWrapper";
-export { default as ContactFormButton } from "./atoms/ContactFormButton";

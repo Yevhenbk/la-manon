@@ -5,7 +5,10 @@ interface ContactFormButtonProps {
   contactFormButtonData: ContactFormSubmitButtonInterface;
 }
 
-const ContactFormButton: React.FC<ContactFormButtonProps> = ({ onClick, contactFormButtonData }) => {
+const ContactFormButton: React.FC<ContactFormButtonProps> = ({
+  onClick,
+  contactFormButtonData,
+}) => {
   return (
     <button
       type={contactFormButtonData.type}
@@ -17,7 +20,7 @@ const ContactFormButton: React.FC<ContactFormButtonProps> = ({ onClick, contactF
     >
       {contactFormButtonData.label}
     </button>
-  )
-}
+  );
+};
 
 export default ContactFormButton;

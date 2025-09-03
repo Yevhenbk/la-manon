@@ -9,11 +9,18 @@ export interface ContactFormSubmitButtonInterface {
   disabled?: boolean;
 };
 
-export interface ContactFormFieldInterface {
+export interface ContactFormFieldInterface extends LabelFieldInterface, InputFieldInterface {
   id: string;
   label: string;
+  isTextarea?: boolean;
+}
+
+export interface LabelFieldInterface {
+  label: string;
+}
+
+export interface InputFieldInterface {
   type: "text" | "email" | "textarea";
   name: string;
   required?: boolean;
-  isTextarea?: boolean;
-}
+};

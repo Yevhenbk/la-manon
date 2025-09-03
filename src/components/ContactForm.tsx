@@ -1,24 +1,17 @@
 "use client"
 
-import { FC } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import { 
   ContactFormInterface, ContactFormFieldInterface, ContactFormSubmitButtonInterface } from "@/utils/interfaces"
 import { contactFormData } from "@/utils/constants"
-import ContactFormButton from "./atoms/ContactFormButton"
+import { ContactFormButton, Input } from "./atoms"
 
-const ContactForm: FC = () => {
+const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("mjkerndb");
 
   if (state.succeeded) {
     return <p className="text-green-600 font-semibold">¡Gracias por tu mensaje!</p>;
   }
-
-  const wrapper = "flex flex-col gap-2 "
-  const textareaWrapper = "flex flex-col gap-2 md:col-span-2 md:row-span-2"
-  const input = "rounded-md border-2 border-secondary p-2 text-sm text-secondary outline-none"
-  const textarea = "rounded-md border-2 border-secondary p-2 text-sm h-32 md:h-full outline-none"
-  const label = "text-sm"
 
   return (
     <form
@@ -46,20 +39,7 @@ const ContactForm: FC = () => {
               autoComplete="on"
             />
           ) : (
-            <input
-              id={field.id}
-              type={field.type}
-              name={field.name}
-              className="rounded-md border-2 border-secondary p-2 text-sm text-secondary outline-none"
-              required={field.required}
-              autoComplete={
-                field.name === "email" ? "email" :
-                field.name === "firstName" ? "given-name" :
-                field.name === "lastName" ? "family-name" :
-                field.name === "phone" ? "tel" :
-                "on"
-              }
-            />
+            <Input id={field.id} inputData={field} />
           )}
           <ValidationError prefix={field.label} field={field.name} errors={state.errors} />
         </div>
