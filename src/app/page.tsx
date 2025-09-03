@@ -1,7 +1,11 @@
 import { NextPage } from "next";
-import { MainBoard, Footer } from "@/components";
-import { FormWrapper, ProductCardList, LabelCardList } from "@/components/organisms";
-import { Navbar,  } from "@/components/molecules";
+import {
+  FormWrapper,
+  ProductCardList,
+  LabelCardList,
+  MainBoard,
+} from "@/components/organisms";
+import { Navbar, Footer } from "@/components/molecules";
 import {
   navbarData,
   mainBoardData,
