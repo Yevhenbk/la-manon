@@ -1,36 +1,25 @@
-import { FC } from "react"
-import { FaPhoneAlt } from "react-icons/fa"
-import { IoMdMail } from "react-icons/io"
-import { IoLocation } from "react-icons/io5"
 import ContactForm from "./ContactForm"
-import { IconType } from "react-icons"
+import { FormWrapperInterface, ContactFormInterface } from "@/utils/interfaces"
 
-interface IconsProps {
-  component: IconType,
-  title: string
+interface FormWrapperProps {
+  formWrapperData: FormWrapperInterface;
+  contactFormData: ContactFormInterface;
 }
 
-const icons: IconsProps[] = [
-  { component: FaPhoneAlt, title: "+34 912 40 12 83" },
-  { component: IoMdMail, title: "lamanon.sagasta.ia@gmail.com" },
-  { component: IoLocation, title: "C. de Sagasta, 5, Chamberí, 28004 Madrid" },
-]
-
-const FormWrapper: FC = () => {
+const FormWrapper: React.FC<FormWrapperProps> = ({ formWrapperData, contactFormData }) => {
   return (
     <div className="flex flex-col text-secondary
     font-medium my-32 gap-8 w-full md:w-[50vw] relative
     md:left-[10vw] items-center md:items-start">
       <div className="flex flex-col gap-8 text-start w-[20rem] md:w-[25rem]">
        <h2 className="text-3xl xl:text-5xl">
-          Contacta con Nosotros
+          {formWrapperData.header}
         </h2>
         <p className="text-xs md:text-sm xl:text-lg">
-          Ven a conocernos y déjate sorprender por el aroma de nuestro café y la frescura de nuestra 
-          bollería artesanal.
+          {formWrapperData.subheader}
         </p>
         <div className="flex flex-col gap-4 items-start">
-          {icons.map((
+          {formWrapperData.icons.map((
             {
               component: IconComponent,
               title
@@ -49,7 +38,7 @@ const FormWrapper: FC = () => {
           ))}
         </div>
       </div>
-      <ContactForm />
+      <ContactForm contactFormData={contactFormData} />
     </div>
   )
 }

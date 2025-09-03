@@ -5,3 +5,4 @@ export * from "./footerData";
 export * from "./cardData";
 export * from "./labelCardData";
 export * from "./contactFormData";
+export * from "./formWrapperData";  

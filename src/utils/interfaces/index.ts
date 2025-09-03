@@ -6,3 +6,4 @@ export * from "./cardInterface";
 export * from "./scheduleInterface";
 export * from "./labelCardInterface";
 export * from "./contactFormInterface";
+export * from "./formWrapperInterface";

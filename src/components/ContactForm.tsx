@@ -13,7 +13,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ contactFormData }) => {
   const [state, handleSubmit] = useForm(
-    process.env.FORMSPREE_API_KEY as string
+    process.env.NEXT_PUBLIC_FORMSPREE_API_KEY as string
   );
 
   if (state.succeeded) {
