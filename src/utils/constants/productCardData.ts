@@ -1,6 +1,6 @@
-import { CardInterface } from "../interfaces";
+import { ProductCardInterface } from "../interfaces";
 
-export const cardData: CardInterface[] = [
+export const productCardData: ProductCardInterface[] = [
   {
     id: 1,
     title: "Empieza la mañana con la combinación más clásica y reconfortante.",

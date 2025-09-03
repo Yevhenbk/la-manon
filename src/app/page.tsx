@@ -1,20 +1,15 @@
 import { NextPage } from "next";
-import {
-  MainBoard,
-  Navbar,
-  NestedCards,
-  Footer,
-  LabelCardList,
-  FormWrapper,
-} from "@/components";
+import { MainBoard, Navbar, Footer, LabelCardList } from "@/components";
+import { FormWrapper, ProductCardList } from "@/components/organisms";
 import {
   navbarData,
   mainBoardData,
   footerData,
-  cardData,
+  productCardData,
   labelCardData,
   contactFormData,
   formWrapperData,
+  productCardListData,
 } from "@/utils/constants";
 
 const Home: NextPage = () => {
@@ -23,7 +18,10 @@ const Home: NextPage = () => {
       <Navbar navbarData={navbarData} />
       <MainBoard mainBoardData={mainBoardData} />
       <LabelCardList labelCardData={labelCardData} />
-      <NestedCards cardData={cardData} />
+      <ProductCardList
+        productCardListData={productCardListData}
+        productCardData={productCardData}
+      />
       <FormWrapper
         formWrapperData={formWrapperData}
         contactFormData={contactFormData}

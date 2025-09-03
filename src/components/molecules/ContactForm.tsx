@@ -5,7 +5,7 @@ import {
   ContactFormInterface,
   ContactFormFieldInterface,
 } from "@/utils/interfaces";
-import { ContactFormButton, Input, Textarea, Label } from "./atoms";
+import { ContactFormButton, Input, Textarea, Label } from "../atoms";
 
 interface ContactFormProps {
   contactFormData: ContactFormInterface;
