@@ -4,7 +4,7 @@ import { useForm, ValidationError } from "@formspree/react"
 import { 
   ContactFormInterface, ContactFormFieldInterface, ContactFormSubmitButtonInterface } from "@/utils/interfaces"
 import { contactFormData } from "@/utils/constants"
-import { ContactFormButton, Input } from "./atoms"
+import { ContactFormButton, Input, Textarea } from "./atoms"
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("mjkerndb");
@@ -31,13 +31,7 @@ const ContactForm: React.FC = () => {
             {field.label}
           </label>
           {field.isTextarea ? (
-            <textarea
-              id={field.id}
-              name={field.name}
-              className="rounded-md border-2 border-secondary p-2 text-sm h-32 md:h-full outline-none"
-              required={field.required}
-              autoComplete="on"
-            />
+            <Textarea id={field.id} textareaData={field} />
           ) : (
             <Input id={field.id} inputData={field} />
           )}
