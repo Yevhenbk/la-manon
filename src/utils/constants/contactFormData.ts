@@ -1,6 +1,7 @@
 import { ContactFormInterface } from "../interfaces/contactFormInterface";
 
 export const contactFormData: ContactFormInterface = {
+    message: "¡Gracias por tu mensaje!",
     form: [
         { id: "firstName", label: "Nombre *", type: "text", name: "firstName", required: true },
         { id: "lastName", label: "Apellido *", type: "text", name: "lastName", required: true },

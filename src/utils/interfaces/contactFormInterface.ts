@@ -1,6 +1,7 @@
 export interface ContactFormInterface {
   form: ContactFormFieldInterface[];
   submitButton: ContactFormSubmitButtonInterface;
+  message: string;
 };
 
 export interface ContactFormSubmitButtonInterface {

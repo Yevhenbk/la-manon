@@ -1,16 +1,25 @@
-"use client"
+"use client";
 
-import { useForm, ValidationError } from "@formspree/react"
-import { 
-  ContactFormInterface, ContactFormFieldInterface, ContactFormSubmitButtonInterface } from "@/utils/interfaces"
-import { contactFormData } from "@/utils/constants"
-import { ContactFormButton, Input, Textarea } from "./atoms"
+import { useForm, ValidationError } from "@formspree/react";
+import {
+  ContactFormInterface,
+  ContactFormFieldInterface,
+} from "@/utils/interfaces";
+import { ContactFormButton, Input, Textarea, Label } from "./atoms";
 
-const ContactForm: React.FC = () => {
-  const [state, handleSubmit] = useForm("mjkerndb");
+interface ContactFormProps {
+  contactFormData: ContactFormInterface;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ contactFormData }) => {
+  const [state, handleSubmit] = useForm(
+    process.env.FORMSPREE_API_KEY as string
+  );
 
   if (state.succeeded) {
-    return <p className="text-green-600 font-semibold">¡Gracias por tu mensaje!</p>;
+    return (
+      <p className="text-green-600 font-semibold">{contactFormData.message}</p>
+    );
   }
 
   return (
@@ -27,22 +36,22 @@ const ContactForm: React.FC = () => {
               : "flex flex-col gap-2"
           }
         >
-          <label className="text-sm" htmlFor={field.id}>
-            {field.label}
-          </label>
+          <Label id={field.id} labelData={field} />
           {field.isTextarea ? (
             <Textarea id={field.id} textareaData={field} />
           ) : (
             <Input id={field.id} inputData={field} />
           )}
-          <ValidationError prefix={field.label} field={field.name} errors={state.errors} />
+          <ValidationError
+            prefix={field.label}
+            field={field.name}
+            errors={state.errors}
+          />
         </div>
       ))}
-      <ContactFormButton
-        contactFormButtonData={contactFormData.submitButton}
-      />
+      <ContactFormButton contactFormButtonData={contactFormData.submitButton} />
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
