@@ -8,14 +8,16 @@ import {
 import { Navbar, Footer } from "@/components/molecules";
 import {
   navbarData,
-  mainBoardData,
-  footerData,
-  productCardData,
   labelCardData,
+  productCardData,
+  footerData,
   contactFormData,
+} from "@/utils/constants/molecules";
+import {
   formWrapperData,
   productCardListData,
-} from "@/utils/constants";
+  mainBoardData,
+} from "@/utils/constants/organisms";
 
 const Home: NextPage = () => {
   return (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IoLocation } from "react-icons/io5";
-import { MainBoardInterface, MenuButtonInterface } from "@/utils/interfaces";
+import { MainBoardInterface } from "@/utils/interfaces/organisms";
+import { MenuButtonInterface } from "@/utils/interfaces/atoms/menuButtonInterface";
 import MenuButton from "../atoms/MenuButton";
 
 interface MainBoardProps {

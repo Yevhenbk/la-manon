@@ -1,10 +1,10 @@
-import { MenuButtonInterface } from "../interfaces";
+import { MenuButtonInterface } from "@/utils/interfaces/atoms/menuButtonInterface";
 
 export const menuButtonData: MenuButtonInterface[] = [
   {
     id: 1,
     label: "Carta Desayunos",
-    link: "/menu-desayunos.pdf"
+    link: "/menu-desayunos.pdf",
   },
   // {
   //   id: 2,

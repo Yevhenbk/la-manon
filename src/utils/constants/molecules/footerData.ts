@@ -1,4 +1,4 @@
-import { FooterInterface, FooterItemInterface } from "../interfaces";
+import { FooterInterface, FooterItemInterface } from "@/utils/interfaces";
 
 export const footerItems: FooterItemInterface[] = [
     {

@@ -1,4 +1,4 @@
-import { MenuButtonInterface } from "./menuButtonInterface";
+import { MenuButtonInterface } from "../atoms/menuButtonInterface";
 
 export interface MainBoardInterface {
   header: string;

@@ -1,4 +1,4 @@
-import { LabelCardInterface } from "../interfaces";
+import { LabelCardInterface } from "@/utils/interfaces";
 
 export const labelCardData: LabelCardInterface[] = [
   {
@@ -18,5 +18,5 @@ export const labelCardData: LabelCardInterface[] = [
     title: "Recetas",
     label: "Elaboradas con Pasión",
     background: "light",
-  }
+  },
 ];

@@ -1,7 +1,7 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
-import { FormWrapperInterface } from "../interfaces";
+import { FormWrapperInterface } from "@/utils/interfaces";
 
 export const formWrapperData: FormWrapperInterface = {
   header: "Contacta con Nosotros",

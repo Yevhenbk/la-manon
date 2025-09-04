@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MenuButtonInterface } from "@/utils/interfaces";
+import { MenuButtonInterface } from "@/utils/interfaces/atoms/menuButtonInterface";
 
 interface MenuButtonProps {
   menuButtonData: MenuButtonInterface;
