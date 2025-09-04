@@ -1,4 +1,4 @@
-import { FooterInterface, FooterItemInterface } from "@/utils/interfaces";
+import { FooterInterface, FooterItemInterface } from "@/utils/interfaces/molecules";
 
 export const footerItems: FooterItemInterface[] = [
     {

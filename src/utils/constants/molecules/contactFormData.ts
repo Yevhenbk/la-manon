@@ -1,4 +1,4 @@
-import { ContactFormInterface } from "@/utils/interfaces";
+import { ContactFormInterface } from "@/utils/interfaces/molecules";
 
 export const contactFormData: ContactFormInterface = {
   message: "¡Gracias por tu mensaje!",

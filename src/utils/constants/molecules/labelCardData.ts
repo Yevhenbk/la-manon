@@ -1,4 +1,4 @@
-import { LabelCardInterface } from "@/utils/interfaces";
+import { LabelCardInterface } from "@/utils/interfaces/molecules";
 
 export const labelCardData: LabelCardInterface[] = [
   {

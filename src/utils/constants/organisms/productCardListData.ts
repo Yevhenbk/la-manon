@@ -1,4 +1,4 @@
-import { ProductCardListInterface } from "@/utils/interfaces";
+import { ProductCardListInterface } from "@/utils/interfaces/organisms";
 
 export const productCardListData: ProductCardListInterface = {
   header: "Nuestros Sabores & Especialidades",

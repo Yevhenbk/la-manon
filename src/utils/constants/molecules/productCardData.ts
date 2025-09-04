@@ -1,4 +1,4 @@
-import { ProductCardInterface } from "@/utils/interfaces";
+import { ProductCardInterface } from "@/utils/interfaces/molecules";
 
 export const productCardData: ProductCardInterface[] = [
   {
