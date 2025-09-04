@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { LabelCardInterface } from "@/utils/interfaces";
+import { LabelCardInterface } from "@/utils/interfaces/molecules";
 
 interface LabelCardProps {
   labelCardData: LabelCardInterface;

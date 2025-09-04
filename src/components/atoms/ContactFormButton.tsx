@@ -1,4 +1,4 @@
-import { ContactFormSubmitButtonInterface } from "@/utils/interfaces";
+import { ContactFormSubmitButtonInterface } from "@/utils/interfaces/molecules";
 
 interface ContactFormButtonProps {
   onClick?: () => void;

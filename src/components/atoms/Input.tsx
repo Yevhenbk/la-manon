@@ -1,4 +1,4 @@
-import { InputFieldInterface } from "@/utils/interfaces";
+import { InputFieldInterface } from "@/utils/interfaces/molecules";
 
 interface InputProps {
   id: string;

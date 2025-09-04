@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProductCardInterface } from "@/utils/interfaces";
+import { ProductCardInterface } from "@/utils/interfaces/molecules";
 
 interface ProductCardProps {
   productCardData: ProductCardInterface;

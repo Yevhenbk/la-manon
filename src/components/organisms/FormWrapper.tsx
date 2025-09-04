@@ -1,5 +1,6 @@
 import ContactForm from "../molecules/ContactForm";
-import { FormWrapperInterface, ContactFormInterface } from "@/utils/interfaces";
+import { ContactFormInterface } from "@/utils/interfaces/molecules";
+import { FormWrapperInterface } from "@/utils/interfaces/organisms";
 
 interface FormWrapperProps {
   formWrapperData: FormWrapperInterface;

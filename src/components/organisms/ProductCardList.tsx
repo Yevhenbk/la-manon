@@ -1,8 +1,6 @@
 import { ProductCard } from "../molecules";
-import {
-  ProductCardInterface,
-  ProductCardListInterface,
-} from "@/utils/interfaces";
+import { ProductCardInterface } from "@/utils/interfaces/molecules";
+import { ProductCardListInterface } from "@/utils/interfaces/organisms";
 
 interface ProductCardListProps {
   productCardListData: ProductCardListInterface;

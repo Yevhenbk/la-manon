@@ -1,4 +1,4 @@
-import { LabelFieldInterface } from "@/utils/interfaces";
+import { LabelFieldInterface } from "@/utils/interfaces/molecules";
 
 interface LabelProps {
   id: string;

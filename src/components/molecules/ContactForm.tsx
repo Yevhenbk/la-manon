@@ -1,10 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import {
-  ContactFormInterface,
-  ContactFormFieldInterface,
-} from "@/utils/interfaces";
+import { ContactFormInterface, ContactFormFieldInterface } from "@/utils/interfaces/molecules";
 import { ContactFormButton, Input, Textarea, Label } from "../atoms";
 
 interface ContactFormProps {

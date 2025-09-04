@@ -1,4 +1,4 @@
-import { FooterInterface, FooterItemInterface } from "@/utils/interfaces";
+import { FooterInterface, FooterItemInterface } from "@/utils/interfaces/molecules";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 interface FooterProps {

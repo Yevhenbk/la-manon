@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Menu from "../atoms/Menu";
 import Image from "next/image";
 import Link from "next/link";
-import { NavbarInterface, NavbarItem } from "@/utils/interfaces";
+import { NavbarInterface, NavbarItem } from "@/utils/interfaces/molecules";
 
 interface NavbarProps {
   navbarData: NavbarInterface;
