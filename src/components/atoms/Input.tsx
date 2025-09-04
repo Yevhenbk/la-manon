@@ -11,7 +11,7 @@ const Input: React.FC<InputProps> = ({ id, inputData }) => {
       id={id}
       type={inputData.type}
       name={inputData.name}
-      className="rounded-md border-2 border-secondary p-2 text-sm text-secondary outline-none"
+      className="rounded-md border-2 border-secondary p-2 text-sm md:text-lg text-secondary outline-none"
       required={inputData.required}
       autoComplete={
         inputData.name === "email"

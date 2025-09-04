@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productCardData }) => {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-20 flex justify-center items-end">
-        <h2 className="text-white font-medium text-2xl p-4 text-start">
+        <h2 className="text-white font-medium text-2xl md:text-3xl p-4 text-start">
           {productCardData.title}
         </h2>
       </div>

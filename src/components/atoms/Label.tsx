@@ -7,7 +7,7 @@ interface LabelProps {
 
 const Label: React.FC<LabelProps> = ({ id, labelData }) => {
   return (
-    <label className="text-sm" htmlFor={id}>
+    <label className="text-sm md:text-lg" htmlFor={id}>
       {labelData.label}
     </label>
   );
