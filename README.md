@@ -26,39 +26,6 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 
 ![Mobile Preview](assets/mobile_preview.png)
 
-## Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Yevhenbk/la-manon.git
-   cd la-manon
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables:**
-   - Create a `.env.local` file in the root directory.
-   - Add your Formspree key:
-     ```
-     NEXT_PUBLIC_FORMSPREE_API_KEY=yourFormspreeFormID
-     ```
-
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open [http://localhost:3000](http://localhost:3000) to view the app.**
-
-## Project Structure
-
-- `/src/app` – Next.js app directory
-- `/src/components` – Atomic design components (atoms, molecules, organisms)
-- `/src/utils/constants` – Data and configuration files
-
 ## License
 
 This project is for internal use by La Manon "Bistro & Boulangerie".
