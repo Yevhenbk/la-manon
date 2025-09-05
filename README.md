@@ -22,6 +22,10 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 - [Formspree](https://formspree.io/) (contact form)
 - [React Icons](https://react-icons.github.io/react-icons/) (icons)
 
+## Project Preview
+
+![Mobile Preview](assets/mobile_preview.png)
+
 ## Getting Started
 
 1. **Clone the repository:**
