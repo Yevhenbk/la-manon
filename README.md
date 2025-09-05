@@ -1,7 +1,7 @@
 # La Manon "Bistro & Boulangerie" Landing Page
 
 A mobile-first landing page for the in-house client **La Manon "Bistro & Boulangerie"**.  
-Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code concepts and the atomic design pattern.
+Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code concepts, the atomic design pattern, and applying SOLID principles for maintainability and scalability.
 
 ## Features
 
