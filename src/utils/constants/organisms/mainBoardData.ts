@@ -10,4 +10,5 @@ export const mainBoardData: MainBoardInterface = {
   altText: "La Manon Sagasta 5",
   address: "C. de Sagasta, 5, Chamberí, 28004 Madrid",
   menuButtons: menuButtonData,
+  blurDataURL: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4="
 };

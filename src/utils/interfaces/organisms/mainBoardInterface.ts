@@ -8,4 +8,5 @@ export interface MainBoardInterface {
   altText: string;
   address: string;
   menuButtons: MenuButtonInterface[];
+  blurDataURL: string;
 }

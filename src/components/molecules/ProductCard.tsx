@@ -16,6 +16,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ productCardData }) => {
           src={productCardData.imageUrl}
           alt={productCardData.title}
           fill
+          placeholder="blur"
+          blurDataURL={productCardData.blurDataURL}
+          sizes="w-full h-full"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/40 z-10"></div>

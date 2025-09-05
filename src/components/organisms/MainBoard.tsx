@@ -25,14 +25,15 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
           <div className="mouse-move" />
         </div>
         <Image
-          className="object-cover h-[40dvh] 
-          md:h-[100dvh] w-auto md:w-[60vw] border-4
-          border-white rounded-2xl
+          className="object-cover border-4 border-white rounded-2xl
           xl:rounded-3xl"
+          sizes="h-[40dvh] md:h-[100dvh] w-auto md:w-[60vw]"
           src={mainBoardData.imageUrl}
           alt={mainBoardData.altText}
           fill
           priority={true}
+          placeholder="blur"
+          blurDataURL={mainBoardData.blurDataURL}
         />
         <h1
           className="text-4xl md:text-6xl xl:text-9xl 
