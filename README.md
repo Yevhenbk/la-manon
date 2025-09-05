@@ -14,6 +14,10 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 - **Performance optimizations** (lazy loading, responsive images)
 - **Modern UI** with custom branding
 
+## Project Preview
+
+![Mobile Preview](assets/mobile_preview.png)
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
@@ -21,10 +25,6 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Formspree](https://formspree.io/) (contact form)
 - [React Icons](https://react-icons.github.io/react-icons/) (icons)
-
-## Project Preview
-
-![Mobile Preview](assets/mobile_preview.png)
 
 ## License
 
