@@ -10,6 +10,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "La Manon",
   description: "La Manon – Boulangerie & Bistro | Panaderías Pastelerías Cafeterías Delicatesen | Franquicia",
+  icons: {
+    icon: "/lamanon_logo.svg",
+  },
 };
 
 const RootLayout = ({
@@ -19,9 +22,6 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/lamanon_logo.svg" type="image/svg+xml" />
-      </head>
       <body
         className={poppins.className}
       >
