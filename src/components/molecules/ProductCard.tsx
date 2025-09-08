@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productCardData }) => {
           fill
           placeholder="blur"
           blurDataURL={productCardData.blurDataURL}
-          sizes="w-full h-full"
+          sizes="(min-width: 768px) 40vw, 100vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/40 z-10"></div>
