@@ -14,6 +14,15 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 - **Performance optimizations** (lazy loading, responsive images)
 - **Modern UI** with custom branding
 
+## Lighthouse Audit
+
+![Lighthouse scores](assets/lighthouse_metrics.png)
+
+- **Performance:** 95
+- **Accessibility:** 92
+- **Best Practices:** 93
+- **SEO:** 100
+
 ## Project Preview
 
 ### Web (Mobile)
