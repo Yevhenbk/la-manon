@@ -11,8 +11,7 @@ interface MainBoardProps {
 const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
   return (
     <div
-      className="flex flex-col w-vw h-[100dvh]
-    overflow-hidden md:flex-row-reverse relative"
+      className="flex flex-col w-vw h-[100dvh] overflow-hidden md:flex-row-reverse relative"
     >
       <div
         className="relative h-[40dvh] md:h-[100dvh]
@@ -27,7 +26,7 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
         <Image
           className="object-cover border-4 border-white rounded-2xl
           xl:rounded-3xl"
-          sizes="h-[40dvh] md:h-[100dvh] w-auto md:w-[60vw]"
+          sizes="(min-width: 768px) 60vw, 100vw"
           src={mainBoardData.imageUrl}
           alt={mainBoardData.altText}
           fill
@@ -64,7 +63,7 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
             </svg>
           ))}
         </div>
-        <div className="flex flex-col items-start gap-2 md:pt-4 md:pt-8">
+        <div className="flex flex-col items-start gap-2 md:pt-4">
           {mainBoardData.menuButtons.map(
             (menuButtonData: MenuButtonInterface) => (
               <MenuButton
