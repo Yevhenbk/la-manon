@@ -6,11 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
-    "axios": "^1.11.0",
     "classnames": "^2.5.1",
     "next": "15.5.2",
     "react": "19.1.0",
