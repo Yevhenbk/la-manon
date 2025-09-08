@@ -47,9 +47,9 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
       py-12 xl:py-32 px-6 xl:px-12 md:pt-32 xl:pt-60 md:py-20 
       h-[60dvh] md:h-dvh md:w-[40vw] text-secondary"
       >
-        <h5 className="font-medium text-lg xl:text-3xl">
+        <h2 className="font-medium text-lg xl:text-3xl">
           {mainBoardData.title}
-        </h5>
+        </h2>
         <div className="md:flex space-x-2 justify-start items-center hidden">
           {[...Array(mainBoardData.rating)].map((_, i) => (
             <svg
