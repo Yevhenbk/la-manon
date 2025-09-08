@@ -13,12 +13,13 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ contactFormData }) => {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_API_KEY;
+  const [state, handleSubmit] = useForm(formId || ""); // Always call useForm
+
   if (!formId) {
     return (
       <p className="text-red-600 font-semibold">Formulario no configurado.</p>
     );
   }
-  const [state, handleSubmit] = useForm(formId);
 
   if (state.succeeded) {
     return (
