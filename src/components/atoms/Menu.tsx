@@ -28,6 +28,7 @@ const Menu: React.FC<MenuProps> = ({ children }) => {
       <button
         type="button"
         aria-expanded={isMenuOpen}
+        aria-label="Open menu"
         aria-controls="mobile-menu"
         onClick={() => setIsMenuOpen(true)}
         className="lg:hidden block"
