@@ -1,7 +1,10 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import { ContactFormInterface, ContactFormFieldInterface } from "@/utils/interfaces/molecules";
+import {
+  ContactFormInterface,
+  ContactFormFieldInterface,
+} from "@/utils/interfaces/molecules";
 import { ContactFormButton, Input, Textarea, Label } from "../atoms";
 
 interface ContactFormProps {
@@ -9,9 +12,13 @@ interface ContactFormProps {
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ contactFormData }) => {
-  const [state, handleSubmit] = useForm(
-    process.env.NEXT_PUBLIC_FORMSPREE_API_KEY as string
-  );
+  const formId = process.env.NEXT_PUBLIC_FORMSPREE_API_KEY;
+  if (!formId) {
+    return (
+      <p className="text-red-600 font-semibold">Formulario no configurado.</p>
+    );
+  }
+  const [state, handleSubmit] = useForm(formId);
 
   if (state.succeeded) {
     return (
