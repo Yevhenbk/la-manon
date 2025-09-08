@@ -23,7 +23,7 @@ export interface LabelFieldInterface {
 }
 
 export interface InputFieldInterface {
-  type: "text" | "email" | "textarea";
+  type: "text" | "email" | "textarea" | "tel";
   name: string;
   required?: boolean;
 }
