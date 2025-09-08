@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -11,33 +11,52 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-
-    document.body.classList.toggle("overflow-hidden");
-  };
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.classList.toggle("overflow-hidden", isMenuOpen);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isMenuOpen]);
 
   return (
     <div className="flex items-center gap-4 z-[999]">
-      <div className="lg:hidden block">
-        <IoIosMenu className="text-3xl cursor-pointer" onClick={toggleMenu} />
-      </div>
+      <button
+        type="button"
+        aria-expanded={isMenuOpen}
+        aria-controls="mobile-menu"
+        onClick={() => setIsMenuOpen(true)}
+        className="lg:hidden block"
+      >
+        <IoIosMenu className="text-3xl" aria-hidden="true" />
+      </button>
       <div
-        className={`fixed inset-0 bg-white bg-opacity-0 z-50 transition-transform transform ${
+        id="mobile-menu"
+        className={`fixed inset-0 z-50 transition-transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        tabIndex={-1}
+        aria-modal="true"
+        role="dialog"
       >
-        <div className="flex justify-end h-dvh">
-          <div
-            className="bg-white p-4 rounded-lg w-dvw flex flex-col justify-center items-center
-          gap-8"
+        <div
+          className="absolute inset-0 bg-black/40"
+          onClick={() => setIsMenuOpen(false)}
+        />
+        <div className="relative bg-white p-4 w-dvw h-dvh flex flex-col justify-center items-center gap-8">
+          <button
+            type="button"
+            className="absolute top-8 right-6"
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
           >
-            <IoCloseSharp
-              className="text-3xl absolute top-8 right-6 hover:cursor-pointer text-tertiary"
-              onClick={toggleMenu}
-            />
-            {children}
-          </div>
+            <IoCloseSharp className="text-3xl text-tertiary" aria-hidden="true" />
+          </button>
+          {children}
         </div>
       </div>
     </div>
