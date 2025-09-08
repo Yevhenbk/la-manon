@@ -24,6 +24,9 @@ const Input: React.FC<InputProps> = ({ id, inputData }) => {
           ? "tel"
           : "on"
       }
+      pattern={
+        inputData.type === "tel" ? "[0-9+\\-\\s()]{7,}" : undefined
+      }
     />
   );
 };
