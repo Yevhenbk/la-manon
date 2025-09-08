@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
       style={{ backgroundColor: colors.bg, color: colors.text }}
     >
       {colors.bg !== "transparent" && (
-        <div className="relative w-[8rem] h-[2rem] md:h-[3rem] w-[9rem] md:ml-6">
+        <div className="relative w-[8rem] h-[2rem] md:h-[3rem] md:ml-6">
           <Image
             src={navbarData.imageUrl}
             alt={navbarData.altText}
@@ -49,8 +49,8 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
       <div className="flex items-center gap-4 ml-auto">
         <Menu>
           {navbarData.items.main.map((item: NavbarItem) => (
-            <Link key={item.id} href={item.href} target="_blank">
-              <p className="text-sm xl:text-md 2xl:text-lg text-tertiary">
+            <Link key={item.id} href={item.href} target="_blank" rel="noopener noreferrer">
+              <p className="text-sm xl:text-base 2xl:text-lg text-tertiary">
                 {item.label}
               </p>
             </Link>
@@ -58,8 +58,8 @@ const Navbar: React.FC<NavbarProps> = ({ navbarData }) => {
         </Menu>
         <div className="hidden lg:flex justify-center gap-12 pr-20">
           {navbarData.items.main.map((item: NavbarItem) => (
-            <Link key={item.id} href={item.href} target="_blank">
-              <p className="text-sm xl:text-md 2xl:text-lg">
+            <Link key={item.id} href={item.href} target="_blank" rel="noopener noreferrer">
+              <p className="text-sm xl:text-base 2xl:text-lg">
                 {item.label}
               </p>
             </Link>
