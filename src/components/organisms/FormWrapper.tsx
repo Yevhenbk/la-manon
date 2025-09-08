@@ -26,7 +26,7 @@ const FormWrapper: React.FC<FormWrapperProps> = ({
           {formWrapperData.icons.map(
             ({ component: IconComponent, title }, index: number) => (
               <div key={index} className="flex flex-row items-center gap-2">
-                <IconComponent className="text-sm md:text-base" />
+                <IconComponent className="text-sm md:text-base" aria-hidden="true" />
                 <p className="text-sm md:text-base">{title}</p>
               </div>
             )
