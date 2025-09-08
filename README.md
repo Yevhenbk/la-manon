@@ -16,7 +16,14 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 
 ## Project Preview
 
-![Mobile Preview](assets/mobile_preview.png)
+### Web
+
+![Mobile Preview Web](assets/mobile_web_preview.png)
+
+### Menu
+
+![Mobile Preview Menu Front](assets/menu_preview_front.png)
+![Mobile Preview Menu Back](assets/menu_preview_back.png)
 
 ## Tech Stack
 
