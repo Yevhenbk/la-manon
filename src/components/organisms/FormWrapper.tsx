@@ -18,7 +18,7 @@ const FormWrapper: React.FC<FormWrapperProps> = ({
     md:left-[10vw] items-center md:items-start"
     >
       <div className="flex flex-col gap-8 text-start w-[20rem] md:w-[25rem]">
-        <h2 className="text-3xl xl:text-5xl">{formWrapperData.header}</h2>
+        <h1 className="text-3xl xl:text-5xl">{formWrapperData.header}</h1>
         <p className="text-xs md:text-sm xl:text-lg">
           {formWrapperData.subheader}
         </p>
