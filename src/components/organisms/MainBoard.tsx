@@ -31,6 +31,7 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
           alt={mainBoardData.altText}
           fill
           priority={true}
+          fetchPriority="high"
           placeholder="blur"
           blurDataURL={mainBoardData.blurDataURL}
         />
