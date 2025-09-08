@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FooterInterface, FooterItemInterface } from "@/utils/interfaces/molecules";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -5,15 +6,25 @@ interface FooterProps {
   footerData: FooterInterface;
 }
 
+const iconMap: Record<string, React.JSX.Element> = {
+  phone: <FaPhone className="inline mr-1" />,
+  email: <FaEnvelope className="inline mr-1" />,
+  address: <FaMapMarkerAlt className="inline mr-1" />,
+};
+
 const Footer: React.FC<FooterProps> = ({ footerData }) => {
   return (
     <footer className="w-full">
       <div className="w-full flex justify-center items-center py-8 bg-black">
-        <img
-          src={footerData.imageUrl}
-          alt="Logo"
-          className="h-[4rem] md:h-20 object-contain"
-        />
+        <div className="relative h-20 w-40">
+          <Image
+            src={footerData.imageUrl}
+            alt="Logo"
+            fill
+            className="object-contain"
+            sizes="160px"
+          />
+        </div>
       </div>
       <div
         className="w-full bg-tertiary flex flex-col-reverse md:flex-row justify-around items-center text-black font-medium 
@@ -23,29 +34,12 @@ const Footer: React.FC<FooterProps> = ({ footerData }) => {
           {footerData.copyright}
         </span>
         <div className="flex flex-col md:flex-row gap-4">
-          {footerData.footerItems.map((item: FooterItemInterface) => {
-            let icon = null;
-            if (item.label.includes("@"))
-              icon = <FaEnvelope className="inline mr-1" />;
-            else if (
-              /\+?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}[\s-]?\d{2,3}/.test(
-                item.label
-              ) ||
-              /\d{9}/.test(item.label)
-            )
-              icon = <FaPhone className="inline mr-1" />;
-            else if (
-              item.label.toLowerCase().includes("madrid") ||
-              item.label.toLowerCase().includes("chamberí")
-            )
-              icon = <FaMapMarkerAlt className="inline mr-1" />;
-            return (
-              <span key={item.id} className="text-xs flex items-center gap-1">
-                {icon}
-                {item.label}
-              </span>
-            );
-          })}
+          {footerData.footerItems.map((item: FooterItemInterface) => (
+            <span key={item.id} className="text-xs flex items-center gap-1">
+              {item.type && iconMap[item.type]}
+              {item.label}
+            </span>
+          ))}
         </div>
       </div>
     </footer>
