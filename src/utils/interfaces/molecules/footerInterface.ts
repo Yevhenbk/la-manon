@@ -7,4 +7,5 @@ export interface FooterInterface {
 export interface FooterItemInterface {
   id: number;
   label: string;
+  type?: "phone" | "email" | "address";
 }
