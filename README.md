@@ -16,11 +16,11 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 
 ## Project Preview
 
-### Web
+### Web (Mobile)
 
 ![Mobile Preview Web](assets/mobile_web_preview.png)
 
-### Menu
+### Menu (Front & Back)
 
 ![Mobile Preview Menu Front](assets/menu_preview_front.png)
 ![Mobile Preview Menu Back](assets/menu_preview_back.png)
