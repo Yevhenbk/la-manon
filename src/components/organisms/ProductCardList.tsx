@@ -18,9 +18,9 @@ const ProductCardList: React.FC<ProductCardListProps> = ({
       font-medium py-20 items-center md:items-start md:justify-between
       gap-8"
       >
-        <h2 className="text-3xl xl:text-5xl w-[20rem]">
+        <h1 className="text-3xl xl:text-5xl w-[20rem]">
           {productCardListData.header}
-        </h2>
+        </h1>
         <p className="text-xs md:text-sm xl:text-lg w-[20rem] md:w-[25rem]">
           {productCardListData.subheader}
         </p>
