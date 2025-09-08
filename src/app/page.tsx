@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import {
   FormWrapper,
   ProductCardList,
@@ -19,7 +18,7 @@ import {
   mainBoardData,
 } from "@/utils/constants/organisms";
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div>
       <Navbar navbarData={navbarData} />
