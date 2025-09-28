@@ -31,8 +31,13 @@ Built with **Next.js**, **TypeScript**, and **Tailwind CSS** using clean code co
 
 ### Menu (Front & Back)
 
-![Mobile Preview Menu Front](assets/menu_preview_front.png)
-![Mobile Preview Menu Back](assets/menu_preview_back.png)
+![Preview Menu Front](assets/menu_preview_front.png)
+![Preview Menu Back](assets/menu_preview_back.png)
+
+### Board
+
+![Preview Board](assets/board_preview.png)
+
 
 ## Tech Stack
 
