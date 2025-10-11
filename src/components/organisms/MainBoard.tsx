@@ -36,7 +36,7 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
           blurDataURL={mainBoardData.blurDataURL}
         />
         <h1
-          className="text-4xl md:text-6xl xl:text-9xl 
+          className="text-4xl md:text-6xl xl:text-7xl
         font-normal absolute text-white bottom-4 
         xl:bottom-8 left-4 xl:left-8 w-[290px]"
         >
@@ -46,7 +46,7 @@ const MainBoard: React.FC<MainBoardProps> = ({ mainBoardData }) => {
       <div
         className="flex flex-col justify-between
       py-12 xl:py-32 px-6 xl:px-12 md:pt-32 xl:pt-60 md:py-20 
-      h-[60dvh] md:h-dvh md:w-[40vw] text-secondary"
+      h-[60dvh] md:h-dvh md:w-[40dvw] text-secondary"
       >
         <h2 className="font-medium text-lg xl:text-3xl">
           {mainBoardData.title}
